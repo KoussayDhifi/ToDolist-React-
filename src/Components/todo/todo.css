@@ -1,9 +1,26 @@
 h1
 {
     text-align: center;
+    animation: blur 1s;
 }
 
 form
 {
-    text-align: center;
+
+display: flex;
+justify-content: center;
+}
+
+input
+{
+  height: 50px;
+  width: 450px;
+  font-size: large;
+  
+}
+
+
+@keyframes blur {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
