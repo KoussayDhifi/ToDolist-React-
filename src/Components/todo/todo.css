@@ -3,6 +3,10 @@ h1
     text-align: center;
     animation: blur 1s;
 }
+small
+{
+  text-align: center;
+}
 
 form
 {
@@ -19,8 +23,41 @@ input
   
 }
 
+input:hover
+{
+  animation: inputclick 0.8s;
+  
+
+}
+
+
+button
+{
+  width: 120px;
+  background-color: red;
+  color: #ffffff;
+  font-size: large;
+}
+button:hover
+{
+  cursor: pointer;
+  animation: buttonhover 0.8s;
+  background-color: #ffffff;
+  color: red;
+}
+
 
 @keyframes blur {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+@keyframes buttonhover {
+  from {background-color: red;color: #ffffff;}
+  to {background-color: #ffffff; color: red;}
+
+}
+
+@keyframes inputclick {
+  from {border-color: black;}
+  to {border-color: chartreuse;}
 }
