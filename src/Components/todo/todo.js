@@ -19,7 +19,7 @@ const Todo = () => {
             body:JSON.stringify({
                 "task":input
             })
-        }).then(data=>data.json).then(data=>data.msg).catch(err=>console.error(err))
+        }).then(res=>res.json()).then(data=>setMsg(data.msg)).catch(err=>console.error(err))
     
     }
 
@@ -28,7 +28,7 @@ const Todo = () => {
         <h1>ToDoList</h1>
         <small><p>{msg}</p></small>
         <form onSubmit={onSubmit}>
-        <input type="text" value={input} onChange={Onwrite}/><button type="submit">Add</button>
+        <input type="text" value={input} onChange={Onwrite} required/><button type="submit">Add</button>
         </form>
         </>
     );
