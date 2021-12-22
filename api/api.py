@@ -31,5 +31,26 @@ def add():
     return {"msg":"Task added successfully !"},200
 
 
+def json_tasks(i):
+    return {
+        "id":i._id,
+        "content":i.content
+    }
+
+
+
+
+@api.route('/getlist',methods=["GET"])
+def get ():
+    tasks = To_Do.query.all()
+    
+    t = map(json_tasks,tasks)
+    
+    return {"Done":[*t]}
+
+
+
+
+
 if (__name__ == "__main__"):
     api.run(debug=True)
