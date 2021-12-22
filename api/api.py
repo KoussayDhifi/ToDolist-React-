@@ -49,6 +49,14 @@ def get ():
     return {"Done":[*t]}
 
 
+@api.route('/delete/<id>')
+def delete(id):
+    found_item = To_Do.query.filter_by(_id = id)
+    found_item.delete()
+    db.session.commit()
+
+    return {"Done":"Task deleted successfully"}
+
 
 
 

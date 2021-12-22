@@ -20,6 +20,7 @@ const Todo = () => {
                 "task":input
             })
         }).then(res=>res.json()).then(data=>setMsg(data.msg)).catch(err=>console.error(err))
+        setInput("")
     
     }
 
